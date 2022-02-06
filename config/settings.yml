@@ -1,5 +1,4 @@
-application:
-  name: rails7-docker
+app_name: rails7-docker
 rails:
   max_threads: <%= ENV['RAILS_MAX_THREADS'] || 5 %>
   min_threads: <%= ENV['RAILS_MIN_THREADS'] || 5 %>

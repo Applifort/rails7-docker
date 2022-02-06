@@ -10,14 +10,14 @@ default: &default
 
 development:
   <<: *default
-  database: <%=Settings.application.name%>_development
+  database: <%= Settings.app_name %>_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: <%=Settings.application.name%>_test
+  database: <%= Settings.app_name %>_test
 
 staging:
   <<: *default

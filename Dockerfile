@@ -1,13 +1,12 @@
-FROM ruby:3.1.0-slim
+FROM ruby:3.1.0-alpine3.15
 
 ARG APP_ROOT=/app
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    libpq-dev \
-    postgresql-client \
-    git \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ARG PACKAGES="vim openssl-dev postgresql-dev build-base curl nodejs yarn less tzdata git postgresql-client bash screen"
+
+RUN apk update \
+    && apk upgrade \
+    && apk add --update --no-cache $PACKAGES
 
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
