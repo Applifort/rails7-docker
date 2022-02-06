@@ -1,0 +1,41 @@
+version: '3.7'
+
+x-shared-volumes: &shared-volumes
+  - .:/app:cached
+  - ./public/packs:/app/public/packs:delegated
+  - ~/.ssh:/root/.ssh
+  - ~/.bash_history:/root/.bash_history
+  - bundle_cache:/bundle_cache
+
+x-shared-evironment: &shared-environment
+  BUNDLE_PATH: /bundle_cache
+  GEM_HOME: /bundle_cache
+  GEM_PATH: /bundle_cache
+  RAILS_PORT: 3000
+  RUBYOPT: -W:no-deprecated -W:no-experimental
+  DATABASE_HOST: db
+  DATABASE_USERNAME: postgres
+  DATABASE_PORT: 5432
+
+services:
+  web:
+    build: .
+    image: rails-docker
+    working_dir: /app
+    volumes: *shared-volumes
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    environment:
+      <<: *shared-environment
+    command: bash -c "rm -f tmp/pids/server.pid && bin/rails s -p 3000 -b '0.0.0.0'"
+  db:
+    image: postgres:11.4
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+volumes:
+  bundle_cache:
