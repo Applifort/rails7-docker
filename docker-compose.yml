@@ -37,7 +37,7 @@ services:
     volumes: *shared-volumes
     environment:
       <<: *shared-environment
-    command: "yarn build --watch"
+    command: "yarn watch"
     tty: true
   db:
     image: postgres:11.4
