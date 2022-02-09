@@ -1,5 +1,3 @@
-# Rails 7 boilerplate
-
 ## Ruby on Rails boilerplate: Docker + Rails 7 + React
 
 This biolerplate to create Rails 7 app with React on the board. [Esbuild](https://esbuild.github.io/) to build JS without Webpacker
