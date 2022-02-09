@@ -37,7 +37,7 @@ services:
     volumes: *shared-volumes
     environment:
       <<: *shared-environment
-    command: "esbuild-watch"
+    command: "yarn esbuild-watch"
     tty: true
   db:
     image: postgres:11.4

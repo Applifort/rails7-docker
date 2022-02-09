@@ -6,9 +6,9 @@ build({
     bundle: true,
     plugins: [],
     watch: {
-        onRebuild(error, result) {
-          if (error) console.error('watch build failed')
-          else console.log('watch build succeeded')
+        onRebuild(error) {
+          if (error) console.log('\x1b[31m', 'Build failed')
+          else console.log('\x1b[32m', 'Build succeeded')
         },
       },
     loader: {".js": "jsx"}

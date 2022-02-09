@@ -4,7 +4,7 @@
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
     "build:watch": "node esbuild.js",
-    "lint:watch": "yarn esw \"app/javascript/*.{js,jsx}\"  --watch",
+    "lint:watch": "yarn esw \"app/javascript/*.{js,jsx}\"  --color --watch",
     "esbuild-watch": "yarn build:watch & yarn lint:watch"
   },
   "dependencies": {
