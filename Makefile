@@ -1,10 +1,9 @@
 start:
 	docker-compose up
-
 bind:
 	docker-compose exec web bash
 
-rblint:
+rubylint:
 	bundle exec rubocop
-rblintfix:
+rubylintfix:
 	bundle exec rubocop --auto-correct-all

@@ -31,8 +31,8 @@ All the other software will be installed via Docker container for future use aut
 
 1. Build containers at the command prompt:
 
-        $ docker-compose build
+        $ make build
 
 3. Run up
 
-        $ docker-compose up
+        $ make start
