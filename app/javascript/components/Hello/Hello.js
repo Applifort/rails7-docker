@@ -7,7 +7,7 @@ const Hello = () => {
 
   return (
     <div className={classes.container}>
-      <div>Workingfsfdddfff</div>
+      <div>Hello from React</div>
     </div>
   );
 };

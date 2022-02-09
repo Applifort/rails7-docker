@@ -27,7 +27,7 @@ All the other software will be installed via Docker container for future use aut
 0. Clone the repo and navigate to the target folder.
 
         $ git@github.com:Applifort/rails7-docker.git
-        $ cd bundle-infra
+        $ cd rails7-docker
 
 1. Build containers at the command prompt:
 
