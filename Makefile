@@ -1,3 +1,7 @@
+build:
+	docker-compose build
+run_and_bind:
+	docker-compose run --rm web bash
 start:
 	docker-compose up
 bind:
