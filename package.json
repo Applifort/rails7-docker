@@ -4,7 +4,7 @@
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
     "build:watch": "node esbuild.js",
-    "lint:watch": "yarn esw \"app/javascript/*.{js,jsx}\"  --color --watch",
+    "lint:watch": "yarn esw \"app/javascript/**/*.{js,jsx}\" --color --watch",
     "esbuild-watch": "yarn build:watch & yarn lint:watch"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "@hotwired/turbo-rails": "^7.1.1",
     "@mui/material": "^5.4.0",
     "@mui/styles": "^5.3.0",
+    "@mui/system": "^5.4.1",
     "add": "^2.0.6",
     "esbuild": "^0.14.18",
     "jss": "^10.9.0",

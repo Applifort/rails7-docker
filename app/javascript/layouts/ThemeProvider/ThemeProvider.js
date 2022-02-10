@@ -11,12 +11,12 @@ import theme from './theme';
 const jss = create({ ...jssPreset() });
 
 const ThemeProvider = ({ children }) => (
-    <MUIThemeProvider theme={theme}>
-      <StylesProvider jss={jss}>
-        <CssBaseline />
-        {children}
-      </StylesProvider>
-    </MUIThemeProvider>
+  <MUIThemeProvider theme={theme}>
+    <StylesProvider jss={jss}>
+      <CssBaseline />
+      {children}
+    </StylesProvider>
+  </MUIThemeProvider>
 );
 
 ThemeProvider.propTypes = {

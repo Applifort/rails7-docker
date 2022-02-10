@@ -7,7 +7,7 @@ const Hello = () => {
 
   return (
     <div className={classes.container}>
-      <div>Hello from React</div>
+      <h1>Ruby on Rails + React + Mui</h1>
     </div>
   );
 };

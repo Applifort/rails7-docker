@@ -7,6 +7,6 @@ export default makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red',
+    backgroundColor: '#61dafb',
   },
 }));
