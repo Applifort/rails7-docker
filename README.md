@@ -33,11 +33,18 @@ All the other software will be installed via Docker container for future use aut
 
         $ make build
 
-2. Now run container and install gems and create DB
+2. Now run container
 
         $ make run_and_bind
+        
+        Now we are inside the container. Install gems and created db
+
         $ bundle install
         $ rails db:create db:migrate
+
+        Now exit from container
+
+        $ exit
 
 3. Run up
 
